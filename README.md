@@ -4,7 +4,7 @@
 The purpose of this website is to serve as an interactive quiz on Physics and Astronomy. It is being developed as part of Code Institutes "Hackathon 1 - Front-end with HTML, CSS and JavaScript" project. 
 
 ## User Stories
-### 1. Welcome Screen
+### 1. Welcome Screen (Must Have)
 
 **As a user, I want to view a welcome screen so that I understand the purpose of the quiz**
 
@@ -17,7 +17,7 @@ Implementation Tasks:
 -	Create the HTML structure for the welcome screen. 
 -	Style the welcome screen using CSS. 
 
-### 2. Quiz Category
+### 2. Quiz Category (Could Have)
 **As a user, I want to select a quiz category (Physics, Astronomy, or Mixed) so that I can choose the topics I want to be tested on.**
 
 **Acceptance Criteria**
@@ -32,7 +32,7 @@ Implementation Tasks:
 - Store the selected category in JavaScript.
 - Filter the question list based on the selected category.
 
-### 3. Start Button
+### 3. Start Button (Must Have)
 
 **As a user, I want to start the quiz by clicking a Start button so that I can begin answering questions.**
 
@@ -48,7 +48,7 @@ Implementation Tasks:
 - Add an event listener to detect button clicks.
 - Initialise the quiz variables and display the first question.
 
-### 4. Question Layout
+### 4. Question Layout (Must Have)
 
 **As a user, I want one multiple-choice question displayed at a time so that I can focus on answering it.**
 
@@ -64,7 +64,7 @@ Implementation Tasks:
 - Create a function to display the current question.
 - Dynamically update the webpage using DOM manipulation.
 
-### 5. Four-Question Layout
+### 5. Four-Question Layout (Must Have)
 
 **As a user, I want to select one answer from four options so that I can submit my response.**
 
@@ -80,7 +80,7 @@ Implementation Tasks:
 - Add CSS styling to indicate the selected answer.
 - Store the user's selected answer in JavaScript.
 
-### 6. Next Question Button
+### 6. Next Question Button (Must Have)
 
 **As a user, I want to move to the next question after answering so that I can complete the quiz.**
 
@@ -96,7 +96,7 @@ Implementation Tasks:
 - Increase the current question index.
 - Detect when the final question has been answered.
 
- ### 7.Current Score
+ ### 7.Current Score (Should Have)
  
  **As a user, I want to see my current score as I progress so that I can track my performance.**
 
@@ -112,7 +112,7 @@ Implementation Tasks:
 - Compare the selected answer with the correct answer.
 - Update the score display after each question.
 
- ### 8.Correct or Incorrect
+ ### 8.Correct or Incorrect (Must Have)
  
  **As a user, I want to receive feedback indicating whether my answer was correct or incorrect so that I can learn from my mistakes.**
 
@@ -128,7 +128,7 @@ Implementation Tasks:
 - Display different messages for correct and incorrect answers.
 - Use CSS to style the feedback with appropriate colours or icons.
 
-### 9.Randomness
+### 9.Randomness (Should Have)
 
 **As a user, I want the questions and answer choices to appear in a random order so that each quiz attempt is different.**
 
@@ -144,7 +144,7 @@ Implementation Tasks:
 - Randomise both the questions and answer options.
 - Reset the question order when the quiz restarts.
 
-### 10. Final Score
+### 10. Final Score (Must Have)
 
 **As a user, I want to see my final score when the quiz ends so that I know how well I performed.**
 
@@ -160,7 +160,7 @@ Implementation Tasks:
 - Calculate the user's final score.
 - Hide the quiz interface and display the results page.
 
-### 11. Performance Level
+### 11. Performance Level (Could Have)
 
 **As a user, I want to know my performance level so that I understand my result.**
 
@@ -176,7 +176,7 @@ Implementation Tasks:
 - Display the appropriate result message.
 - Style the results section.
 
-### 12. Restart Button
+### 12. Restart Button (Could Have)
 
 **As a user, I want to restart the quiz after finishing so that I can try to improve my score. I should also be able to restart the quiz at anything throughout without using the refresh button**
 
@@ -193,7 +193,7 @@ Implementation Tasks:
 - Shuffle the questions and answers again.
 - Display the first question.
 
-### 13. Responsive Design
+### 13. Responsive Design (Must Have)
 
 **As a user, I want the quiz to work on desktop, tablet, and mobile devices so that I can access it from any device.**
 
