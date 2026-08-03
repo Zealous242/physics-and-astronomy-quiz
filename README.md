@@ -207,20 +207,6 @@ Implementation Tasks:
 **Implementation Tasks**
 
 - Use semantic HTML5 elements to structure the page.
-- Build a responsive layout using CSS Flexbox or Grid.
+- Build a responsive layout using CSS, Flexbox or Grid.
 - Add media queries for different screen sizes.
 - Test the website on desktop, tablet, and mobile devices.
-
-**As a user, I want the website to work on mobile and desktop so that I can play on any device.**
-
-**Acceptance Criteria**
-
-- The layout adjusts for different screen sizes.
-- Buttons remain easy to tap on smaller devices.
-- Text remains readable without zooming.
-
-**Tasks**
-
-- Use responsive CSS layouts.
-- Add media queries.
-- Test the website on multiple screen sizes.
