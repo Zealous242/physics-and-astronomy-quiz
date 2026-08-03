@@ -313,3 +313,104 @@ Encourage repeated practice to improve knowledge and confidence.
 Load quickly and respond smoothly to user interactions.
 Update questions and scores without noticeable delays.
 Work reliably across modern web browsers.
+
+## Scope Plane
+
+### Functional Requirements
+
+The website shall allow users to:
+
+**Quiz Setup**
+
+- View a welcome screen introducing the quiz.
+- Select a quiz category (Physics, Astronomy, or Mixed).
+- Start the quiz using a Start Quiz button.
+
+**Quiz Functionality**
+
+- Display one multiple-choice question at a time.
+- Display four answer options for each question.
+- Allow users to select one answer per question.
+- Move to the next question after answering.
+- Display the current question number.
+- Display the user's current score during the quiz.
+- Provide immediate feedback indicating whether the selected answer is correct or incorrect.
+- Randomise the order of questions and answer choices for each quiz attempt.
+
+**Results**
+
+- Display the user's final score when the quiz is completed.
+- Display the total number of correct answers.
+- Allow users to restart the quiz and begin a new attempt.
+
+**Responsive Design**
+
+- Adapt the layout for desktop, tablet, and mobile devices.
+- Ensure buttons and controls are easy to interact with on touchscreens. 
+
+### Content Requirements
+
+The website shall include:
+
+**Educational Content**
+
+Physics multiple-choice questions covering topics such as:
+- Mechanics
+- Forces and Motion
+- Energy
+- Electricity
+- Waves
+
+Astronomy multiple-choice questions covering topics such as:
+- The Solar System
+- Stars
+- Galaxies
+- Black Holes
+- Space Exploration
+
+**Interface Content**
+
+- Website title and welcome message.
+- Quiz instructions.
+- Category selection controls.
+- Question text.
+- Four answer options for each question.
+- Feedback messages (Correct/Incorrect).
+- Current score display.
+- Question number indicator.
+- Final results screen.
+- Restart Quiz button. 
+
+### Non-Functional Requirements
+
+The website should:
+
+**Performance**
+
+- Load within a few seconds on a typical internet connection.
+- Respond immediately to user interactions.
+- Run efficiently in modern web browsers.
+
+**Usability**
+
+- Provide an intuitive and consistent interface.
+- Use clear navigation and readable typography.
+- Minimise the number of steps required to complete the quiz.
+
+**Accessibility**
+
+- Use semantic HTML5 elements.
+- Ensure sufficient colour contrast.
+- Support keyboard navigation.
+- Include descriptive labels for interactive elements.
+
+**Compatibility**
+
+- Function correctly on current versions of Chrome, Edge, Firefox, and Safari.
+- Display correctly on desktop, tablet, and mobile screen sizes.
+
+**Maintainability**
+
+- Separate HTML, CSS, and JavaScript into individual files.
+- Organise quiz questions using structured JavaScript objects or JSON.
+- Use meaningful variable names and comments to improve code readability.
