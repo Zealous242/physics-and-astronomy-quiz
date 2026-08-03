@@ -467,3 +467,15 @@ By the end of the project, the website will provide:
 - Automatic score calculation and results display.
 - Immediate answer feedback.
 - Randomised quiz sessions for replayability.
+
+## Skeleton Plane
+
+### Desktop, Laptop and Tablet Wireframes
+
+The quiz will look the same on desktops, laptops and tablets so these devices will use the same wireframes
+
+![Screenshot of wireframes for laptop, tablet and desktop](/assets/images/desktop-wireframes.png)
+
+### Mobile Wireframes
+
+![Screenshot of wireframes for mobile](/assets/images/mobile-wireframes.png)
