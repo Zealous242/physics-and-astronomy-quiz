@@ -414,3 +414,56 @@ The website should:
 - Separate HTML, CSS, and JavaScript into individual files.
 - Organise quiz questions using structured JavaScript objects or JSON.
 - Use meaningful variable names and comments to improve code readability.
+
+### Features Included (MVP) 
+
+The initial version of the website will include:
+
+- Welcome screen
+- Physics, Astronomy, and Mixed categories
+- Multiple-choice questions
+- Four answer options per question
+- Randomised questions and answers
+- Score tracking
+- Correct/incorrect feedback
+- Final results screen
+- Restart quiz functionality
+- Responsive layout
+
+### Features Excluded (Future Enhancements)
+
+The following features are outside the initial project scope but could be added later:
+
+- User accounts and login system
+- Online multiplayer quizzes
+- Global leaderboards
+- Timed quiz mode
+- Difficulty levels
+- Audio effects and background music
+- Achievement badges and rewards
+- Question search and filtering
+- High-score storage using a database
+- Animated educational explanations after each question
+- AI-generated quiz questions
+- Support for additional science subjects such as Chemistry or Biology
+
+### Project Constraints
+
+The project will be developed with the following constraints:
+
+- Built using HTML5, CSS3, and vanilla JavaScript (no external frameworks).
+- Data will be stored locally within JavaScript rather than a database.
+- The application will run entirely in the user's web browser.
+- The design should remain simple, responsive, and easy to maintain.
+- The project should be achievable within the available development timeframe.
+
+### Deliverables
+
+By the end of the project, the website will provide:
+
+- An interactive Physics and Astronomy quiz.
+- Responsive layouts for desktop, tablet, and mobile.
+- Dynamic question rendering using JavaScript.
+- Automatic score calculation and results display.
+- Immediate answer feedback.
+- Randomised quiz sessions for replayability.
