@@ -210,3 +210,106 @@ Implementation Tasks:
 - Build a responsive layout using CSS, Flexbox or Grid.
 - Add media queries for different screen sizes.
 - Test the website on desktop, tablet, and mobile devices.
+
+## Strategy Plane
+
+### Website Objectives
+
+The website aims to:
+
+- Provide an engaging and interactive learning experience.
+- Help users test and improve their knowledge of Physics and Astronomy.
+- Reinforce learning through immediate feedback and scoring.
+- Encourage repeated use by randomising questions and answer choices.
+- Demonstrate front-end web development skills using HTML5, CSS3, and JavaScript.
+- Provide a responsive website that works effectively across desktop, tablet, and mobile devices.
+
+### Success Criteria
+
+The project will be considered successful if:
+
+- Users can complete the quiz without encountering usability issues.
+- Users receive accurate scoring and immediate answer feedback.
+- The website functions correctly across modern browsers and devices.
+- The interface is intuitive and easy to navigate.
+- Questions are displayed correctly and randomised between quiz attempts.
+- Users can restart the quiz and receive a new set of questions.
+- The website demonstrates effective use of HTML5, CSS3, and JavaScript.
+
+### Target Audience
+
+The target audience for this website includes students, educators, and science enthusiasts who want an engaging way to test and expand their knowledge of physics and astronomy. The quiz is designed to be interactive, educational, and accessible across a range of devices, making it suitable for both learning and self-assessment
+
+### Primary Audience
+
+Secondary school students (ages 14–18) studying Physics or Astronomy.
+College and university students enrolled in science, physics, or astronomy courses.
+Individuals preparing for science examinations or quizzes.
+
+### Secondary Audience
+
+Teachers and tutors looking for an interactive classroom revision tool.
+Science enthusiasts and hobbyists with an interest in physics, astronomy, and space exploration.
+Lifelong learners who enjoy expanding their scientific knowledge through quizzes.
+
+### User Characteristics
+
+The intended users are likely to:
+
+- Have a basic to intermediate understanding of Physics and Astronomy.
+- Want a fun and engaging way to reinforce their knowledge.
+- Prefer an interactive learning experience with immediate feedback.
+- Access the quiz from desktop computers, tablets, or smartphones.
+- Appreciate a clean, responsive, and easy-to-navigate interface.
+
+### Purpose for the Target Audience
+
+The website aims to:
+
+Reinforce learning through interactive multiple-choice questions.
+Help users assess their understanding of Physics and Astronomy concepts.
+Encourage continued learning through immediate feedback and scoring.
+Provide an enjoyable educational experience that can be used independently or as a revision aid.
+
+This target audience is broad enough for an educational project while clearly identifying the users who would benefit most from the application.
+
+### User Needs
+
+**Functional Needs**
+
+Be able to start the quiz quickly with minimal setup.
+Choose a quiz category (Physics, Astronomy, or Mixed).
+Answer multiple-choice questions one at a time.
+Receive immediate feedback on whether an answer is correct or incorrect.
+View their current score throughout the quiz.
+See a final score at the end of the quiz.
+Restart the quiz to attempt a higher score.
+Experience a different quiz each time through randomised questions and answer choices.
+
+**Usability Needs**
+
+Navigate the website easily with clear buttons and instructions.
+Read questions and answers using a clean, uncluttered layout.
+Access the quiz on desktop, tablet, and mobile devices.
+Receive clear visual feedback when selecting answers or interacting with buttons.
+Complete the quiz without unnecessary complexity or distractions.
+
+**Accessibility Needs**
+
+Use high-contrast colours and readable fonts.
+Ensure buttons are large enough to be easily selected on touch devices.
+Support keyboard navigation where possible.
+Present content in a logical and accessible structure using semantic HTML.
+
+**Educational Needs**
+
+Test knowledge across a range of Physics and Astronomy topics.
+Learn from mistakes through immediate feedback.
+Reinforce understanding of scientific concepts in an engaging way.
+Encourage repeated practice to improve knowledge and confidence.
+
+**Performance Needs**
+
+Load quickly and respond smoothly to user interactions.
+Update questions and scores without noticeable delays.
+Work reliably across modern web browsers.
