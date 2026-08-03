@@ -34,3 +34,60 @@ main {
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #6cc8ff;
+}
+
+#welcome-screen p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  color: #e6e6e6;
+}
+
+#category-selection h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+#category-selection {
+  margin-bottom: 35px;
+}
+
+#category-selection button {
+  margin: 10px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  background: #2f4f83;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#category-selection button:hover {
+  background: #4a76ba;
+  transform: translateY(-3px);
+}
+
+#start-btn {
+  background: #ffca3a;
+  color: #111;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#start-btn:hover {
+  background: rgb(255, 217, 92);
+  transform: scale(1.05);
+}
+
