@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Physics & Astronomy Quiz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        #not-found {
+            padding: 2rem;
+        }
+
+        #not-found h1 {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #not-found p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #home-btn {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="not-found">
+            <h1>404</h1>
+            <p>
+                Looks like this question doesn't exist.
+                The page you're looking for can't be found.
+            </p>
+            <button type="button" id="home-btn" onclick="window.location.href='index.html'">
+                Back to Quiz
+            </button>
+        </section>
+    </main>
+</body>
+</html>
