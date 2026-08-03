@@ -128,7 +128,7 @@ Implementation Tasks:
 - Display different messages for correct and incorrect answers.
 - Use CSS to style the feedback with appropriate colours or icons.
 
-### 9.Randomness (Should Have)
+### 9.Randomness (Could Have)
 
 **As a user, I want the questions and answer choices to appear in a random order so that each quiz attempt is different.**
 
