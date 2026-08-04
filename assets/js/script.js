@@ -174,3 +174,36 @@ answerButtons.forEach((btn) => {
     });
 });
 
+/**
+ * Next question / finish quiz
+ */
+
+nextBtn.addEventListener("click", () => {
+    state.currentIndex++;
+    if (state.currentIndex < state.quizQuestions.length) {
+    loadQuestion();
+    } else {
+    showResults();
+    }
+});
+
+function showResults() {
+    finalScoreEl.textContent = state.score;
+    maxScoreEl.textContent = state.quizQuestions.length;
+
+    const percent = state.score / state.quizQuestions.length;
+    let message;
+    if (percent === 1) {
+    message = "Perfect score! You're a true astrophysicist.";
+    } else if (percent >= 0.7) {
+    message = "Great job! You really know your stuff.";
+    } else if (percent >= 0.4) {
+    message = "Not bad.. A bit more studying and you'll ace it.";
+    } else {
+    message = "Keep exploring the stars and try again!";
+    }
+    resultMessageEl.textContent = message;
+
+    showScreen(resultsScreen);
+}
+
