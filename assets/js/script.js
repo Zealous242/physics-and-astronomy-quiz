@@ -1,133 +1,170 @@
-const maxNumberOfQuestions = 15;
+const maxNumberOfQuestions = 20;
 
-const correctAnswers = 0;
+let currentQuestionIndex = 0;
+let score = 0;
+let answered = false;
+let questionOrder = [];
+let currentQuestionData = null;
+let currentCorrectAnswerIndex = 0;
+let selectedQuestionSet = allQuestions;
 
-const incorrectAnswers = 0;
+document.addEventListener("DOMContentLoaded", initQuiz);
 
-const sampleQuestions = {
-    "What is 2 + 2?": {
-        "responses": ["3", "4", "5", "6"],
-        "correctAnswer": "4"
-    },
-    "What is 2 x 2?": {
-        "responses": ["3", "4", "5", "6"],
-        "correctAnswer": "4"
-    },
-    "What is 4 / 2": {
-        "responses": ["3", "4", "5", "6"],
-        "correctAnswer": "4"
-    },
-    "What is 4 x 4": {
-        "responses": ["20", "8", "14", "16"],
-        "correctAnswer": "4"
-    }
+let categoryButtons = document.getElementsByClassName("category-btn");
 
-}
-
-const sampleQuestions2 = [{
-        question: "What is 2 + 2?",
-        options: [
-            "3",
-            "4",
-            "5",
-            "6",
-        ],
-        answer: "4",
-        explanation: ""
-    },
-    {
-        question: "What is 2 x 3?",
-        options: [
-            "3",
-            "4",
-            "5",
-            "6",
-        ],
-        answer: "6",
-        explanation: ""
-    },
-    {
-        question: "What is 2 + 3?",
-        options: [
-            "3",
-            "4",
-            "5",
-            "6",
-        ],
-        answer: "5",
-        explanation: ""
-    },
-    {
-        question: "What is 6 -  3?",
-        options: [
-            "3",
-            "4",
-            "5",
-            "6",
-        ],
-        answer: "6",
-        explanation: ""
-    }
-]
-
-
-document.addEventListener("DOMContentLoaded", loadNextQuestion())
-
-//document.getElementsByClassName
-
-function loadNextQuestion() {
-    let question = document.getElementById("question");
-
-    let optionChoices = document.getElementsByClassName("question-response");
-
-    let chosenQuestion = sampleQuestions2[Math.floor(Math.random() * sampleQuestions2.length)]
-
-    question.textContent = `${chosenQuestion.question}`
-
-
-    for (let option of optionChoices) {
-        let chosenOptions = [];
-        let randomPick = chosenQuestion.options[Math.floor(Math.random() * 4)]
-        if (!chosenOptions.includes(randomPick)) {
-            chosenOptions.push(randomPick)
-
+for (let buttons of categoryButtons) {
+    buttons.addEventListener("click", () => {
+        const category = buttons.dataset.category;
+        if (category === "physics") {
+            selectedQuestionSet = physicsQuestions;
+            document.getElementById("category-title").textContent = "Physics";
+        } else if (category === "astronomy") {
+            selectedQuestionSet = astronomyQuestions;
+            document.getElementById("category-title").textContent = "Astronomy";
+        } else if (category === "mixed") {
+            selectedQuestionSet = allQuestions;
+            document.getElementById("category-title").textContent = "Mixed";
         }
+    });
+}
 
-        option.textContent = `${randomPick}`
+function initQuiz() {
+    document.getElementById("total-questions").textContent = maxNumberOfQuestions;
+    document.getElementById("current-question").textContent = 1;
+    document.getElementById("score-value").textContent = score;
+    document.getElementById("next-btn").disabled = true;
+    document.getElementById("results-screen").hidden = true;
+    document.getElementById("quiz-screen").style.display = "flex";
 
+    document.querySelectorAll(".answer-btn").forEach((button) => {
+        button.addEventListener("click", () => handleAnswer(Number(button.dataset.index)));
+    });
+
+    document.getElementById("next-btn").addEventListener("click", handleNext);
+    document.getElementById("restart-btn").addEventListener("click", restartQuiz);
+
+    questionOrder = shuffleArray(selectedQuestionSet.map((_, index) => index));
+    loadQuestion();
+}
+
+function shuffleArray(items) {
+    const shuffled = [...items];
+
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
 
-    let firstResponseValue = document.getElementById("first-question-response").textContent;
-
-    document.getElementById("first-question-response-btn").value = firstResponseValue
-
-
-    let secondResponseValue = document.getElementById("second-question-response").textContent;
-
-    document.getElementById("second-question-response-btn").value = secondResponseValue
-
-
-    let thirdResponseValue = document.getElementById("third-question-response").textContent;
-
-    document.getElementById("third-question-response-btn").value = thirdResponseValue
-
-
-    let fourthResponseValue = document.getElementById("fourth-question-response").textContent;
-
-    document.getElementById("fourth-question-response-btn").value = fourthResponseValue
-
-
+    return shuffled;
 }
 
-function pickRandomProperty(obj) {
-    var result;
-    var count = 0;
-    for (var prop in obj)
-        if (Math.random() < 1 / ++count)
-            result = prop;
-    return result;
+function loadQuestion() {
+    const questionId = questionOrder[currentQuestionIndex];
+    const questionData = selectedQuestionSet[questionId];
+
+    if (!questionData) {
+        return;
+    }
+
+    const shuffledOptions = shuffleArray(questionData.options);
+    const correctAnswerText = questionData.options[questionData.answer];
+    currentCorrectAnswerIndex = shuffledOptions.indexOf(correctAnswerText);
+
+    currentQuestionData = {
+        ...questionData,
+        options: shuffledOptions,
+        answer: currentCorrectAnswerIndex
+    };
+
+    document.getElementById("question").textContent = currentQuestionData.question;
+    document.getElementById("current-question").textContent = currentQuestionIndex + 1;
+
+    const answerOptions = document.querySelectorAll("#answers-container .answer-option");
+
+    answerOptions.forEach((optionElement, index) => {
+        const button = optionElement.querySelector(".answer-btn");
+        const text = optionElement.querySelector(".answer-text");
+
+        button.classList.remove("correct", "incorrect");
+        button.disabled = false;
+        button.textContent = String.fromCharCode(65 + index);
+        text.textContent = currentQuestionData.options[index];
+    });
+
+    document.getElementById("feedback-message").textContent = "";
+    document.getElementById("correct-answer").textContent = "";
+    answered = false;
+    document.getElementById("next-btn").disabled = true;
 }
 
+function handleAnswer(selectedIndex) {
+    if (answered) {
+        return;
+    }
 
+    answered = true;
+    const answerButtons = document.querySelectorAll(".answer-btn");
 
-document.getElementById("total-questions").textContent = `${maxNumberOfQuestions}`;
+    answerButtons.forEach((button, index) => {
+        button.disabled = true;
+
+        if (index === currentCorrectAnswerIndex) {
+            button.classList.add("correct");
+        } else if (index === selectedIndex) {
+            button.classList.add("incorrect");
+        }
+    });
+
+    if (selectedIndex === currentCorrectAnswerIndex) {
+        score += 1;
+        document.getElementById("score-value").textContent = score;
+        document.getElementById("feedback-message").textContent = "Correct!";
+    } else {
+        document.getElementById("feedback-message").textContent = "Not quite — try the next one.";
+        document.getElementById("correct-answer").textContent = `Correct answer: ${currentQuestionData.options[currentCorrectAnswerIndex]}`;
+    }
+
+    document.getElementById("next-btn").disabled = false;
+}
+
+function handleNext() {
+    if (!answered) {
+        return;
+    }
+
+    currentQuestionIndex += 1;
+
+    if (currentQuestionIndex >= maxNumberOfQuestions) {
+        showResults();
+        return;
+    }
+
+    loadQuestion();
+}
+
+function showResults() {
+    document.getElementById("quiz-screen").style.display = "none";
+    document.getElementById("results-screen").hidden = false;
+    document.getElementById("final-score").textContent = score;
+    document.getElementById("max-score").textContent = maxNumberOfQuestions;
+
+    if (score === maxNumberOfQuestions) {
+        document.getElementById("result-message").textContent = "Perfect score!";
+    } else if (score >= Math.round(maxNumberOfQuestions / 2)) {
+        document.getElementById("result-message").textContent = "Nice work!";
+    } else {
+        document.getElementById("result-message").textContent = "Keep practicing!";
+    }
+}
+
+function restartQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    answered = false;
+    questionOrder = shuffleArray(selectedQuestionSet.map((_, index) => index));
+
+    document.getElementById("score-value").textContent = score;
+    document.getElementById("results-screen").hidden = true;
+    document.getElementById("quiz-screen").style.display = "flex";
+    loadQuestion();
+}
