@@ -118,4 +118,27 @@ startBtn.addEventListener("click", () => {
     loadQuestion();
 });
 
+/**
+ * Load a question onto the screen
+ */
+
+function loadQuestion() {
+    state.answered = false;
+    feedbackMessageEl.textContent = "";
+    correctAnswerEl.textContent = "";
+    nextBtn.hidden = true;
+
+    const q = state.quizQuestions[state.currentIndex];
+        currentQuestionEl.textContent = state.currentIndex + 1;
+        questionEl.textContent = q.question;
+
+    const answerRows = answersContainer.querySelectorAll("div");
+        answerRows.forEach((row, i) => {
+    const btn = row.querySelector(".answer-btn");
+    const label = row.querySelector("p");
+        label.textContent = q.answers[i];
+        btn.disabled = false;
+        btn.classList.remove("correct", "incorrect");
+        });
+    }
 
