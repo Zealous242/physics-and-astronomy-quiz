@@ -18,18 +18,22 @@ categoryButtons.forEach((button) => {
         const category = button.dataset.category;
         if (category === "physics") {
             selectedQuestionSet = physicsQuestions;
-            document.getElementById("category-title").textContent = "Physics";
+            document.getElementById("header-category-title").textContent = "Physics";
+            initQuiz();
         } else if (category === "astronomy") {
             selectedQuestionSet = astronomyQuestions;
-            document.getElementById("category-title").textContent = "Astronomy";
+            document.getElementById("header-category-title").textContent = "Astronomy";
+            initQuiz();
         } else if (category === "mixed") {
             selectedQuestionSet = allQuestions;
-            document.getElementById("category-title").textContent = "Mixed";
+            document.getElementById("header-category-title").textContent = "Mixed";
+            initQuiz();
         }
     });
 });
 
-
+let headerTitle = document.getElementById("header-category-title");
+//headerTitle.textContent = document.getElementById("category-title").textContent
 
 function initQuiz() {
     document.getElementById("total-questions").textContent = maxNumberOfQuestions;

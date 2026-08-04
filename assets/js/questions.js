@@ -19,8 +19,8 @@ const physicsQuestions = [{
         answer: 2
     },
     {
-        question: 'Which planet is known as the Red Planet?',
-        options: ['Venus', 'Mars', 'Mercury', 'Jupiter'],
+        question: 'What is the name of the force that is responsible for holding protons and neutrons together in the nucleus of an atom?',
+        options: ['Electromagnetic Force', 'Strong Nuclear Force', 'Weak Nuclear Force', 'Gravitational Force'],
         answer: 1
     },
     {
