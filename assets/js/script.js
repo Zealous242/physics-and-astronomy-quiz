@@ -41,3 +41,21 @@ const finalScoreEl = document.getElementById("final-score");
 const maxScoreEl = document.getElementById("max-score");
 const resultMessageEl = document.getElementById("result-message");
 const restartBtn = document.getElementById("restart-btn");
+
+
+
+// ---------------------------------------------------------
+// Category selection
+// ---------------------------------------------------------
+categoryButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+    categoryButtons.forEach((b) => b.classList.remove("selected"));
+    btn.classList.add("selected");
+
+    if (btn.id === "physics-btn") state.category = "physics"; {
+    } else if (btn.id === "astronomy-btn") state.category = "astronomy"; {
+    } else (btn.id === "mixed-btn") state.category = "mixed";
+    });
+});
+
+
