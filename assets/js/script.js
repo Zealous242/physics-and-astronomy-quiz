@@ -142,3 +142,35 @@ function loadQuestion() {
         });
     }
 
+/**
+ * Handle an answer click
+ */
+
+answerButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+    if (state.answered) return;
+    state.answered = true;
+
+    const chosenIndex = Number(btn.dataset.index);
+    const q = state.quizQuestions[state.currentIndex];
+    const correctIndex = q.correctIndex;
+
+    answerButtons.forEach((b) => (b.disabled = true));
+
+    if (chosenIndex === correctIndex) {
+        btn.classList.add("correct");
+        state.score++;
+        scoreValueEl.textContent = state.score;
+        feedbackMessageEl.textContent = "Correct!";
+    } else {
+        btn.classList.add("incorrect");
+        answerButtons[correctIndex].classList.add("correct");
+        feedbackMessageEl.textContent = "Incorrect.";
+        correctAnswerEl.textContent =
+        "Correct answer: " + q.answers[correctIndex];
+}
+
+    nextBtn.hidden = false;
+    });
+});
+
