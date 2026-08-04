@@ -474,8 +474,8 @@ By the end of the project, the website will provide:
 
 The quiz will look the same on desktops, laptops and tablets so these devices will use the same wireframes
 
-![Screenshot of wireframes for laptop, tablet and desktop](/documentation/desktop-wireframes.png)
+![Screenshot of wireframes for laptop, tablet and desktop](/documentation/wireframes/desktop-wireframes.png)
 
 ### Mobile Wireframes
 
-![Screenshot of wireframes for mobile](/documentation/mobile-wireframes.png)
+![Screenshot of wireframes for mobile](/documentation/wireframes/mobile-wireframes.png)
