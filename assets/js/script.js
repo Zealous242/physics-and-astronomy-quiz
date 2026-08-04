@@ -1,4 +1,4 @@
-const maxNumberOfQuestions = 20;
+const maxNumberOfQuestions = 10;
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -6,15 +6,16 @@ let answered = false;
 let questionOrder = [];
 let currentQuestionData = null;
 let currentCorrectAnswerIndex = 0;
-let selectedQuestionSet = allQuestions;
+let selectedQuestionSet = allQuestions; // Default to all questions
 
 document.addEventListener("DOMContentLoaded", initQuiz);
 
-let categoryButtons = document.getElementsByClassName("category-btn");
+const categoryButtons = document.querySelectorAll("#physics-btn, #astronomy-btn, #mixed-btn");
 
-for (let buttons of categoryButtons) {
-    buttons.addEventListener("click", () => {
-        const category = buttons.dataset.category;
+
+categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const category = button.dataset.category;
         if (category === "physics") {
             selectedQuestionSet = physicsQuestions;
             document.getElementById("category-title").textContent = "Physics";
@@ -26,7 +27,9 @@ for (let buttons of categoryButtons) {
             document.getElementById("category-title").textContent = "Mixed";
         }
     });
-}
+});
+
+
 
 function initQuiz() {
     document.getElementById("total-questions").textContent = maxNumberOfQuestions;
