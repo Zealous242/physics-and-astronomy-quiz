@@ -289,7 +289,7 @@ footer a:visited {
   }
 
   h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     margin-bottom: 14px;
   }
 
@@ -299,7 +299,7 @@ footer a:visited {
   }
 
   #category-selection h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   #category-selection button,
@@ -318,14 +318,21 @@ footer a:visited {
   }
 
   #answers-container > div {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 10px;
   }
 
+  #answers-container > div p {
+    margin: 0;
+    text-align: left;
+    line-height: 1.4;
+  }
+
   #answers-container button {
-    width: 100%;
+    width: 50px;
     margin: 0;
     padding: 12px 14px;
   }
