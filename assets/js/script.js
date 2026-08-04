@@ -207,3 +207,18 @@ function showResults() {
     showScreen(resultsScreen);
 }
 
+/**
+ * Restart quiz
+ */
+
+restartBtn.addEventListener("click", () => {
+    categoryButtons.forEach((b) => b.classList.remove("selected"));
+    showScreen(welcomeScreen);
+});
+
+/**
+ * Initial state
+ */
+
+showScreen(welcomeScreen);
+});
