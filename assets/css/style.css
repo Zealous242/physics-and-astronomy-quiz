@@ -9,6 +9,7 @@ body {
 
 }
 
+/* Global Styles */
 main {
   width: 100%;
   background:
@@ -35,12 +36,15 @@ section {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
-  padding: 50px;
+  padding: 25px 25px 0 25px;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  width: 100%;
 }
 
 #quiz-screen {
+  width: min(780px, 100%);
+
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -48,47 +52,10 @@ section {
   padding: 50px;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  margin-top: 30px;
-}
-#quiz-screen header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 35px;
-  padding: 16px 20px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-#progress,
-#score {
-  margin: 0;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, rgba(255, 143, 171, 0.28), rgba(108, 200, 255, 0.28), rgba(255, 202, 58, 0.28));
-  color: #f5f9ff;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-#progress span,
-#score span {
-  color: #6cc8ff;
-  font-weight: 800;
-}
-
-#question {
-  font-size: 1.6rem;
-  margin: 0 0 30px;
-}
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 20px;
   color: #6cc8ff;
   font-weight: 800;
@@ -99,7 +66,8 @@ h1 {
   padding: 14px 24px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);}
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
 
 footer {
   background: linear-gradient(90deg, rgba(5, 10, 25, 0.95) 0%, rgba(47, 79, 131, 0.95) 50%, rgba(5, 10, 25, 0.95) 100%);
@@ -137,6 +105,8 @@ footer a:hover,
 footer a:visited {
   color: #ffd166;
 }
+
+/* Welcome Screen and Categories*/
 
 #welcome-screen p {
   font-size: 1.1rem;
@@ -193,31 +163,68 @@ footer a:visited {
   transform: scale(1.05);
 }
 
-#answers-container > div {
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-#answers-container > div p {
-  margin: 0;
-  text-align: left;
-  line-height: 1.4;
-  word-break: break-word;
+#answers-container>div {
+  display: flex;
+  flex-direction: row;
 }
 
 #answers-container button {
   width: 50px;
-  margin: 0;
-  flex-shrink: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
   border-radius: 8px;
   background: #2f4f83;
   color: white;
   font-size: 1rem;
   cursor: pointer;
   transition: 0.3s;
+  padding: 10px;
+  border: none;
+}
+
+.answer-btn:hover:not(:disabled) {
+  background: #4a76ba;
+  transform: translateY(-2px);
+}
+
+.answer-btn.correct {
+  background: #2f9e44;
+}
+
+.answer-btn.incorrect {
+  background: #c92a2a;
+}
+
+.answer-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.95;
+}
+
+.answer-text {
+  text-align: left;
+  color: #f1f1f1;
+}
+
+#feedback {
+  width: 100%;
+  min-height: 70px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: #ffd166;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+#feedback-message,
+#correct-answer {
+  margin: 0;
 }
 
 #next-btn {
@@ -233,9 +240,15 @@ footer a:visited {
   margin-top: 20px;
 }
 
-#next-btn:hover {
+#next-btn:hover:not(:disabled) {
   background: rgb(255, 217, 92);
   transform: scale(1.05);
+}
+
+#next-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 
@@ -327,36 +340,17 @@ footer a:visited {
     font-size: 1.1rem;
     line-height: 1.5;
     text-align: center;
-    margin-bottom: 20px;
   }
 
-  #answers-container > div {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    align-items: center;
+  .answer-btn {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 12px 10px;
+  }
+
+  .answers {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  #answers-container > div p {
-    margin: 0;
-    text-align: left;
-    line-height: 1.4;
-  }
-
-  #answers-container button {
-    width: 50px;
-    margin: 0;
-    padding: 12px 14px;
-  }
-
-  footer {
-    padding: 12px 16px;
-    justify-content: center;
-    text-align: center;
-  }
-
-  footer p {
-    font-size: 0.85rem;
   }
 }
