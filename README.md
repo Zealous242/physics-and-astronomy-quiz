@@ -479,3 +479,34 @@ The quiz will look the same on desktops, laptops and tablets so these devices wi
 ### Mobile Wireframes
 
 ![Screenshot of wireframes for mobile](/documentation/wireframes/mobile-wireframes.png)
+
+## The Surface Plane
+
+### Typography
+
+**Colour palette** 
+
+The colour palette was chosen to reinforce the Physics and Astronomy theme while maintaining good readability and accessibility. A combination of deep blues and bright accent colours creates a modern, space-inspired appearance. 
+
+![Image of color palette used](/documentation/color-palette/color-palette.png)
+
+**Fonts**
+
+
+The website uses Arial as its primary, with Helvetica and sans-serif as fallback fonts. These fonts were selected because they are widely available across operating systems, highly legible at a range of screen sizes, and provide a clean, modern appearance that complements the scientific theme of the quiz.
+
+## AI Usage
+
+ChatGPT and CoPilot were used to generate user stories for the website. They were also used to define the functional and non-function user requirements. 
+
+The CoPilot extension was used in VS Code to generate code blocks for sections such as the quiz section. It was also used to make code suggestions to implement certain functionalities such as choosing a question category.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- Git and GitHub
+- GitHub Pages for deployment
+- CoPilot
+- ChatGPT
+- Markdown Builder
