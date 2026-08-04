@@ -23,8 +23,6 @@ const sampleQuestions = {
     }
 }
 
-// Move this back into function block starting on line 20 when done with testing
-
 document.addEventListener("DOMContentLoaded", () => {
     let question = document.getElementById("question");
 
