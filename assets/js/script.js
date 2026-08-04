@@ -1,11 +1,11 @@
-/*
-script.js
+/**
+ * script.js
 ---------
 Quiz logic for the Physics & Astronomy Quiz.
 Depends on the QUESTIONS array defined in questions.js
 (which must be loaded before this file — it already is,
 per the <script> order in index.html).
-*/
+ */
 
 document.addEventListener("DOMContentLoaded", () => {
 // ---------------------------------------------------------
@@ -47,15 +47,21 @@ const restartBtn = document.getElementById("restart-btn");
 // ---------------------------------------------------------
 // Category selection
 // ---------------------------------------------------------
-categoryButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
+btn.addEventListener("click", () => {
     categoryButtons.forEach((b) => b.classList.remove("selected"));
     btn.classList.add("selected");
 
-    if (btn.id === "physics-btn") state.category = "physics"; {
-    } else if (btn.id === "astronomy-btn") state.category = "astronomy"; {
-    } else (btn.id === "mixed-btn") state.category = "mixed";
-    });
+    if (btn.id === "physics-btn") {
+        state.category = "physics";
+    } else if (btn.id === "astronomy-btn") {
+        state.category = "astronomy";
+    } else if (btn.id === "mixed-btn") {
+        state.category = "mixed";
+    }
 });
 
+/**
+ * Not sure how to add the function to select a category
+ * and then to have the user click start quiz
+ */
 
