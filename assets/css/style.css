@@ -9,6 +9,7 @@ body {
 
 }
 
+/* Global Styles */
 main {
   width: 100%;
   background:
@@ -78,6 +79,8 @@ footer a:visited {
   color: cyan;
 }
 
+/* Welcome Screen and Categories*/
+
 #welcome-screen p {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -127,6 +130,8 @@ footer a:visited {
   background: rgb(255, 217, 92);
   transform: scale(1.05);
 }
+
+/* Questions Section*/
 
 #answers-container>div {
   display: flex;
