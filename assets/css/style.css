@@ -26,6 +26,12 @@ main {
   align-items: center;
   padding: 40px;
 }
+/* Heading */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #6cc8ff;
+}
 
 section {
   margin: 5px;
@@ -41,7 +47,7 @@ section {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   width: 100%;
 }
-
+/* Quiz Screen */
 #quiz-screen {
   width: min(780px, 100%);
 
@@ -63,7 +69,7 @@ section {
   color: #ffd166;
   font-weight: bold;
 }
-
+/* Question Container */
 #question-container {
   width: 100%;
 }
@@ -73,45 +79,6 @@ section {
   line-height: 1.4;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #6cc8ff;
-}
-
-footer {
-  background: linear-gradient(180deg, #1f3b63 0%, #152846 100%);
-  color: #f1f1f1;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  padding: 18px 20px;
-  border-top: 2px solid rgba(255, 209, 102, 0.3);
-}
-
-
-footer p {
-  margin: 0 20px;
-  line-height: 1.6;
-}
-
-footer a {
-  color: #ffd166;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-footer a:visited {
-  color: #ffe29a;
-}
 
 /* Welcome Screen and Categories*/
 
@@ -149,7 +116,7 @@ footer a:visited {
   background: #4a76ba;
   transform: translateY(-3px);
 }
-
+/* Start Button */
 #start-btn {
   background: #ffca3a;
   color: #111;
@@ -185,7 +152,7 @@ footer a:visited {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
-
+/* Answer Buttons */
 .answer-btn {
   width: 46px;
   min-width: 46px;
@@ -230,7 +197,7 @@ footer a:visited {
   align-items: center;
   line-height: 1.25;
 }
-
+/* Feedback */
 #feedback {
   width: 100%;
   min-height: 70px;
@@ -252,7 +219,7 @@ footer a:visited {
 #correct-answer {
   margin: 0;
 }
-
+/* Quiz Controls */
 #quiz-controls {
   display: flex;
   gap: 12px;
@@ -288,7 +255,7 @@ footer a:visited {
   cursor: not-allowed;
   transform: none;
 }
-
+/* Results Screen */
 #results-screen {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
@@ -318,11 +285,43 @@ footer a:visited {
   transform: scale(1.05);
 }
 
+/* Footer */
+footer {
+  background: linear-gradient(180deg, #1f3b63 0%, #152846 100%);
+  color: #f1f1f1;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+  border-top: 2px solid rgba(255, 209, 102, 0.3);
+}
+
+
+footer p {
+  margin: 0 20px;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #ffd166;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+footer a:visited {
+  color: #ffe29a;
+}
 
 /* Tablet */
 @media (max-width: 1024px) {
-  /* .quiz-container {  there is no class quiz-container in the 
-  HTML */
   #quiz-screen {
     width: 90%;
     min-height: 600px;
@@ -333,7 +332,6 @@ footer a:visited {
     font-size: 2.2rem;
   }
 
-  /* no class .question  in HTML */
   #question {
     font-size: 1.3rem;
   }
@@ -347,7 +345,6 @@ footer a:visited {
 
 /* Mobile */
 @media (max-width: 768px) {
-  /* .quiz-container { there is no class quiz-container in the HTML */
     #quiz-screen {
     width: 95%;
     min-height: auto;
@@ -366,8 +363,6 @@ footer a:visited {
   #category-selection h2 {
     font-size: 1.3rem;
   }
-
-  /*.question { there is no class question in the HTML */
   #question {
     font-size: 1.1rem;
     text-align: center;
