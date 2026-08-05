@@ -94,7 +94,7 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  align-items: center;
+  /*align-items: center; appears twice */
   padding: 10px 0;
 }
 
