@@ -24,15 +24,12 @@
             </p>
             <!-- Category Selection -->
             <div id="category-selection">
-                <h2>Select a Category</h2>
-                <button type="button" id="physics-btn">Physics</button>
-                <button type="button" id="astronomy-btn">Astronomy</button>
-                <button type="button" id="mixed-btn">Mixed</button>
+                <h2 id="category-title">Select a Category</h2>
+                <button class="category-btn" type="button" id="physics-btn" data-category="physics">Physics</button>
+                <button class="category-btn" type="button" id="astronomy-btn"
+                    data-category="astronomy">Astronomy</button>
+                <button class="category-btn" type="button" id="mixed-btn" data-category="mixed">Mixed</button>
             </div>
-            <!-- Start Quiz Button -->
-            <button type="button" id="start-btn">
-                Start Quiz
-            </button>
         </section>
         <!-- ========================= -->
         <!-- Quiz Screen -->
@@ -41,6 +38,7 @@
         <section id="quiz-screen">
             <!-- Quiz Header -->
             <header>
+                <h1 id="header-category-title">Quiz</h1>
                 <p id="progress">
                     Question
                     <span id="current-question">1</span>
@@ -60,21 +58,21 @@
             </section>
             <!-- Answer Options -->
             <section id="answers-container">
-                <div>
+                <div class="answer-option">
                     <button type="button" class="answer-btn" data-index="0">A</button>
-                    <p>Response 1</p>
+                    <p class="answer-text">Response 1</p>
                 </div>
-                <div>
+                <div class="answer-option">
                     <button type="button" class="answer-btn" data-index="1">B</button>
-                    <p>Response 2</p>
+                    <p class="answer-text">Response 2</p>
                 </div>
-                <div>
+                <div class="answer-option">
                     <button type="button" class="answer-btn" data-index="2">C</button>
-                    <p>Response 3</p>
+                    <p class="answer-text">Response 3</p>
                 </div>
-                <div>
+                <div class="answer-option">
                     <button type="button" class="answer-btn" data-index="3">D</button>
-                    <p>Response 4</p>
+                    <p class="answer-text">Response 4</p>
                 </div>
             </section>
             <!-- Feedback -->
@@ -87,6 +85,7 @@
                 Next Question
             </button>
         </section>
+
         <!-- ========================= -->
         <!-- Results Screen -->
         <!-- Hidden until quiz ends -->
