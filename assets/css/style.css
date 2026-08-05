@@ -58,6 +58,12 @@ section {
   gap: 20px;
 }
 
+#quiz-screen #score {
+  font-size: 1.2rem;
+  color: #ffd166;
+  font-weight: bold;
+}
+
 #question-container {
   width: 100%;
 }
@@ -83,12 +89,21 @@ footer {
   left: 0;
 
   display: flex;
+
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
 }
 
 footer a {
   color: azure;
+}
+
+footer p {
+  margin: 5px 15px;
 }
 
 footer a:visited {
@@ -114,6 +129,8 @@ footer a:visited {
 }
 
 #category-selection button {
+  width: 140px;
+
   margin: 10px;
   padding: 14px 28px;
   border: none;
@@ -255,6 +272,29 @@ footer a:visited {
   transform: none;
 }
 
+#results-screen {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 25px 25px 25px 25px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+#results-screen button {
+  background: #ffca3a;
+  color: #111;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
 
 /* Tablet */
 @media (max-width: 1024px) {
@@ -318,13 +358,5 @@ footer a:visited {
     min-width: 42px;
     font-size: 0.95rem;
     padding: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
   }
 }
