@@ -8,7 +8,11 @@ let currentQuestionData = null;
 let currentCorrectAnswerIndex = 0;
 let selectedQuestionSet = allQuestions; // Default to all questions
 
-document.addEventListener("DOMContentLoaded", initQuiz);
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("welcome-screen").style.display = "block";
+    document.getElementById("quiz-screen").style.display = "none";
+    document.getElementById("results-screen").hidden = true;
+});
 
 const categoryButtons = document.querySelectorAll("#physics-btn, #astronomy-btn, #mixed-btn");
 
@@ -19,21 +23,27 @@ categoryButtons.forEach((button) => {
         if (category === "physics") {
             selectedQuestionSet = physicsQuestions;
             document.getElementById("header-category-title").textContent = "Physics";
-            initQuiz();
         } else if (category === "astronomy") {
             selectedQuestionSet = astronomyQuestions;
             document.getElementById("header-category-title").textContent = "Astronomy";
-            initQuiz();
         } else if (category === "mixed") {
             selectedQuestionSet = allQuestions;
             document.getElementById("header-category-title").textContent = "Mixed";
-            initQuiz();
         }
+
+        document.getElementById("welcome-screen").style.display = "none";
+        initQuiz();
     });
 });
 
 let headerTitle = document.getElementById("header-category-title");
 //headerTitle.textContent = document.getElementById("category-title").textContent
+
+function showWelcomeScreen() {
+    document.getElementById("welcome-screen").style.display = "block";
+    document.getElementById("quiz-screen").style.display = "none";
+    document.getElementById("results-screen").hidden = true;
+}
 
 function initQuiz() {
     document.getElementById("total-questions").textContent = maxNumberOfQuestions;
@@ -41,6 +51,7 @@ function initQuiz() {
     document.getElementById("score-value").textContent = score;
     document.getElementById("next-btn").disabled = true;
     document.getElementById("results-screen").hidden = true;
+    document.getElementById("welcome-screen").style.display = "none";
     document.getElementById("quiz-screen").style.display = "flex";
 
     document.querySelectorAll(".answer-btn").forEach((button) => {
@@ -50,6 +61,7 @@ function initQuiz() {
     document.getElementById("next-btn").addEventListener("click", handleNext);
     document.getElementById("restart-btn").addEventListener("click", restartQuiz);
     document.getElementById("restart-in-quiz-btn").addEventListener("click", restartQuiz);
+    document.getElementById("choose-category-btn").addEventListener("click", showWelcomeScreen);
 
     questionOrder = shuffleArray(selectedQuestionSet.map((_, index) => index));
     loadQuestion();

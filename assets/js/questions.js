@@ -66,7 +66,7 @@ const astronomyQuestions = [{
         answer: 1
     },
     {
-        question: 'What galaxy is our solar system part of?',
+        question: 'What galaxy is our solar system a part of?',
         options: ['Andromeda', 'Milky Way', 'Whirlpool', 'Sombrero'],
         answer: 1
     },

@@ -247,8 +247,7 @@ footer a:visited {
   flex-wrap: wrap;
 }
 
-#next-btn,
-#restart-in-quiz-btn {
+#quiz-controls button {
   background: #ffca3a;
   color: #111;
   padding: 16px 40px;
@@ -258,6 +257,11 @@ footer a:visited {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+}
+
+#quiz-controls button:hover {
+  background: rgb(255, 217, 92);
+  transform: scale(1.05);
 }
 
 #next-btn:hover:not(:disabled),
