@@ -170,7 +170,7 @@ function showResults() {
     document.getElementById("max-score").textContent = maxNumberOfQuestions;
 
     if (score === maxNumberOfQuestions) {
-        document.getElementById("result-message").textContent = "Perfect Score! Well Done, Einstein Would Be Proud!";
+        document.getElementById("result-message").textContent = "Perfect Score!Einstein Would Be Proud!";
     } else if (score >= Math.round(maxNumberOfQuestions * 0.7)) {
         document.getElementById("result-message").textContent = "Good job, Rocket Scientist in Training!";
     } else if (score >= Math.round(maxNumberOfQuestions * 0.5)) {
