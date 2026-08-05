@@ -58,6 +58,12 @@ section {
   gap: 20px;
 }
 
+#quiz-screen #score {
+  font-size: 1.2rem;
+  color: #ffd166;
+  font-weight: bold;
+}
+
 #question-container {
   width: 100%;
 }
@@ -123,6 +129,8 @@ footer a:visited {
 }
 
 #category-selection button {
+  width: 140px;
+
   margin: 10px;
   padding: 14px 28px;
   border: none;
