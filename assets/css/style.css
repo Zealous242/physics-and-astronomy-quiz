@@ -302,7 +302,9 @@ footer a:visited {
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .quiz-container {
+  /* .quiz-container {  there is no class quiz-container in the 
+  HTML */
+  #quiz-screen {
     width: 90%;
     min-height: 600px;
     padding: 30px;
@@ -312,7 +314,8 @@ footer a:visited {
     font-size: 2.2rem;
   }
 
-  .question {
+  /* no class .question  in HTML */
+  #question {
     font-size: 1.3rem;
   }
 
@@ -325,7 +328,8 @@ footer a:visited {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .quiz-container {
+  /* .quiz-container { there is no class quiz-container in the HTML */
+    #quiz-screen {
     width: 95%;
     min-height: auto;
     padding: 20px;
@@ -344,7 +348,8 @@ footer a:visited {
     font-size: 1.3rem;
   }
 
-  .question {
+  /*.question { there is no class question in the HTML */
+  #question {
     font-size: 1.1rem;
     text-align: center;
   }
