@@ -1,4 +1,5 @@
-const maxNumberOfQuestions = 10;
+// Quiz settings and state
+const maxNumberOfQuestions = 10; // Limit the number of questions in the quiz to 10
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -8,10 +9,11 @@ let currentQuestionData = null;
 let currentCorrectAnswerIndex = 0;
 let selectedQuestionSet = allQuestions; // Default to all questions
 
+// Run the quiz setup when the page has loaded
 document.addEventListener("DOMContentLoaded", initQuiz);
 
+// Category selection handlers
 const categoryButtons = document.querySelectorAll("#physics-btn, #astronomy-btn, #mixed-btn");
-
 
 categoryButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -25,16 +27,17 @@ categoryButtons.forEach((button) => {
             document.getElementById("header-category-title").textContent = "Astronomy";
             initQuiz();
         } else if (category === "mixed") {
-            selectedQuestionSet = allQuestions;
+            selectedQuestionSet = shuffleArray([...physicsQuestions, ...astronomyQuestions]);
             document.getElementById("header-category-title").textContent = "Mixed";
             initQuiz();
         }
     });
 });
 
+// Display the selected category name in the header
 let headerTitle = document.getElementById("header-category-title");
-//headerTitle.textContent = document.getElementById("category-title").textContent
 
+// Initialise the quiz and reset the display
 function initQuiz() {
     document.getElementById("total-questions").textContent = maxNumberOfQuestions;
     document.getElementById("current-question").textContent = 1;
@@ -54,6 +57,8 @@ function initQuiz() {
     loadQuestion();
 }
 
+
+// Shuffle an array so questions and answer options appear in a random order
 function shuffleArray(items) {
     const shuffled = [...items];
 
@@ -65,6 +70,7 @@ function shuffleArray(items) {
     return shuffled;
 }
 
+// Load the next question and display its answer options
 function loadQuestion() {
     const questionId = questionOrder[currentQuestionIndex];
     const questionData = selectedQuestionSet[questionId];
@@ -104,6 +110,7 @@ function loadQuestion() {
     document.getElementById("next-btn").disabled = true;
 }
 
+// Check the selected answer and show whether it is correct
 function handleAnswer(selectedIndex) {
     if (answered) {
         return;
@@ -134,6 +141,7 @@ function handleAnswer(selectedIndex) {
     document.getElementById("next-btn").disabled = false;
 }
 
+// Move to the next question when the user clicks Next
 function handleNext() {
     if (!answered) {
         return;
@@ -149,6 +157,7 @@ function handleNext() {
     loadQuestion();
 }
 
+// Show the final score and completion message
 function showResults() {
     document.getElementById("quiz-screen").style.display = "none";
     document.getElementById("results-screen").hidden = false;
@@ -164,6 +173,7 @@ function showResults() {
     }
 }
 
+// Reset the quiz so the user can start again
 function restartQuiz() {
     currentQuestionIndex = 0;
     score = 0;

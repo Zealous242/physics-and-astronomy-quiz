@@ -76,7 +76,7 @@ h1 {
 footer {
   background-color: #4a76ba;
   color: azure;
-  position: fixed;
+  position: relative;
   z-index: 1000;
   width: 100%;
   bottom: 0;
@@ -309,5 +309,13 @@ footer a:visited {
     min-width: 42px;
     font-size: 0.95rem;
     padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
   }
 }

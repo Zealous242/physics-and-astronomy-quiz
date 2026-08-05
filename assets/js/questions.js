@@ -1,3 +1,5 @@
+// Physics Quiz Questions
+
 const physicsQuestions = [{
         question: 'What is the SI unit of force?',
         options: ['Joule', 'Newton', 'Watt', 'Pascal'],
@@ -50,6 +52,8 @@ const physicsQuestions = [{
     }
 ];
 
+// Astronomy Quiz Questions
+
 const astronomyQuestions = [{
         question: 'What is the largest planet in our solar system?',
         options: ['Mars', 'Saturn', 'Jupiter', 'Neptune'],
@@ -66,7 +70,7 @@ const astronomyQuestions = [{
         answer: 1
     },
     {
-        question: 'What galaxy is our solar system part of?',
+        question: 'What galaxy is our solar system a part of?',
         options: ['Andromeda', 'Milky Way', 'Whirlpool', 'Sombrero'],
         answer: 1
     },
@@ -101,5 +105,7 @@ const astronomyQuestions = [{
         answer: 0
     }
 ];
+
+// Mixed Quiz Questions
 
 const allQuestions = [...physicsQuestions, ...astronomyQuestions];
