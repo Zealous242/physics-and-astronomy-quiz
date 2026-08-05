@@ -304,13 +304,18 @@ footer a:visited {
   background: #ffca3a;
   color: #111;
   padding: 16px 40px;
-  margin: 10px 0;
+  margin: 12px 8px;
   border: none;
   border-radius: 12px;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#results-screen button:hover {
+  background: rgb(255, 217, 92);
+  transform: scale(1.05);
 }
 
 
