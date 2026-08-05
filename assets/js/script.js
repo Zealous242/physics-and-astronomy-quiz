@@ -52,6 +52,7 @@ function initQuiz() {
 
     document.getElementById("next-btn").addEventListener("click", handleNext);
     document.getElementById("restart-btn").addEventListener("click", restartQuiz);
+    document.getElementById("restart-in-quiz-btn").addEventListener("click", restartQuiz);
 
     questionOrder = shuffleArray(selectedQuestionSet.map((_, index) => index));
     loadQuestion();
