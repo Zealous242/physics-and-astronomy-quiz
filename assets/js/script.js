@@ -62,6 +62,7 @@ function initQuiz() {
     document.getElementById("restart-btn").addEventListener("click", restartQuiz);
     document.getElementById("restart-in-quiz-btn").addEventListener("click", restartQuiz);
     document.getElementById("choose-category-btn").addEventListener("click", showWelcomeScreen);
+    document.getElementById("results-choose-category-btn").addEventListener("click", showWelcomeScreen);
 
     questionOrder = shuffleArray(selectedQuestionSet.map((_, index) => index));
     loadQuestion();
@@ -169,11 +170,13 @@ function showResults() {
     document.getElementById("max-score").textContent = maxNumberOfQuestions;
 
     if (score === maxNumberOfQuestions) {
-        document.getElementById("result-message").textContent = "Perfect score!";
-    } else if (score >= Math.round(maxNumberOfQuestions / 2)) {
-        document.getElementById("result-message").textContent = "Nice work!";
+        document.getElementById("result-message").textContent = "Perfect Score! Well Done, Einstein Would Be Proud!";
+    } else if (score >= Math.round(maxNumberOfQuestions * 0.7)) {
+        document.getElementById("result-message").textContent = "Good job, Rocket Scientist in Training!";
+    } else if (score >= Math.round(maxNumberOfQuestions * 0.5)) {
+        document.getElementById("result-message").textContent = "Ooooo, Halfway to the Stars!";
     } else {
-        document.getElementById("result-message").textContent = "Keep practicing!";
+        document.getElementById("result-message").textContent = "Light Years to Go... Keep  Studying!";
     }
 }
 
