@@ -176,7 +176,7 @@ function showResults() {
     } else if (score >= Math.round(maxNumberOfQuestions * 0.5)) {
         document.getElementById("result-message").textContent = "Ooooo, Halfway to the Stars!";
     } else {
-        document.getElementById("result-message").textContent = "Light Years to Go... Keep Studying!";
+        document.getElementById("result-message").textContent = "Light Years to Go... Keep  Studying!";
     }
 }
 
