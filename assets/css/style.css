@@ -223,7 +223,15 @@ footer a:visited {
   margin: 0;
 }
 
-#next-btn {
+#quiz-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#next-btn,
+#restart-in-quiz-btn {
   background: #ffca3a;
   color: #111;
   padding: 16px 40px;
@@ -235,7 +243,8 @@ footer a:visited {
   transition: 0.3s;
 }
 
-#next-btn:hover:not(:disabled) {
+#next-btn:hover:not(:disabled),
+#restart-in-quiz-btn:hover {
   background: rgb(255, 217, 92);
   transform: scale(1.05);
 }
