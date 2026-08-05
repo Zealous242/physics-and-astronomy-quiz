@@ -38,7 +38,7 @@
         <section id="quiz-screen">
             <!-- Quiz Header -->
             <header>
-                <h1 id="header-category-title">Quiz</h1>
+                <h1 id="header-category-title">Mixed</h1>
                 <p id="progress">
                     Question
                     <span id="current-question">1</span>
@@ -57,7 +57,7 @@
                 </h2>
             </section>
             <!-- Answer Options -->
-            <section id="answers-container">
+            <div id="answers-container">
                 <div class="answer-option">
                     <button type="button" class="answer-btn" data-index="0">A</button>
                     <p class="answer-text">Response 1</p>
@@ -74,16 +74,25 @@
                     <button type="button" class="answer-btn" data-index="3">D</button>
                     <p class="answer-text">Response 4</p>
                 </div>
-            </section>
+            </div>
             <!-- Feedback -->
-            <section id="feedback">
+            <div id="feedback">
                 <p id="feedback-message"></p>
                 <p id="correct-answer"></p>
-            </section>
-            <!-- Next Question -->
-            <button type="button" id="next-btn">
-                Next Question
-            </button>
+            </div>
+            <!-- Quiz Controls -->
+            <div id="quiz-controls">
+                <button type="button" id="next-btn">
+                    Next Question
+                </button>
+                <button type="button" id="restart-in-quiz-btn">
+                    Restart
+                </button>
+
+                <button type="button" id="choose-category-btn">
+                    Choose Different Category
+                </button>
+            </div>
         </section>
 
         <!-- ========================= -->
@@ -103,6 +112,9 @@
             </p>
             <button type="button" id="restart-btn">
                 Restart Quiz
+            </button>
+            <button type="button" id="results-choose-category-btn">
+                Choose Different Category
             </button>
         </section>
     </main>
