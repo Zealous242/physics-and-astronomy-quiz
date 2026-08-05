@@ -1,5 +1,4 @@
-// Quiz settings and state
-const maxNumberOfQuestions = 10; // Limit the number of questions in the quiz to 10
+const maxNumberOfQuestions = 10;
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -9,19 +8,14 @@ let currentQuestionData = null;
 let currentCorrectAnswerIndex = 0;
 let selectedQuestionSet = allQuestions; // Default to all questions
 
-<<<<<<< HEAD
-// Run the quiz setup when the page has loaded
-document.addEventListener("DOMContentLoaded", initQuiz);
-=======
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("welcome-screen").style.display = "block";
     document.getElementById("quiz-screen").style.display = "none";
     document.getElementById("results-screen").hidden = true;
 });
->>>>>>> 86331a863d18aa2ad6f15741fe6b484800f76dfe
 
-// Category selection handlers
 const categoryButtons = document.querySelectorAll("#physics-btn, #astronomy-btn, #mixed-btn");
+
 
 categoryButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -33,7 +27,7 @@ categoryButtons.forEach((button) => {
             selectedQuestionSet = astronomyQuestions;
             document.getElementById("header-category-title").textContent = "Astronomy";
         } else if (category === "mixed") {
-            selectedQuestionSet = shuffleArray([...physicsQuestions, ...astronomyQuestions]);
+            selectedQuestionSet = allQuestions;
             document.getElementById("header-category-title").textContent = "Mixed";
         }
 
@@ -42,19 +36,15 @@ categoryButtons.forEach((button) => {
     });
 });
 
-// Display the selected category name in the header
 let headerTitle = document.getElementById("header-category-title");
+//headerTitle.textContent = document.getElementById("category-title").textContent
 
-<<<<<<< HEAD
-// Initialise the quiz and reset the display
-=======
 function showWelcomeScreen() {
     document.getElementById("welcome-screen").style.display = "block";
     document.getElementById("quiz-screen").style.display = "none";
     document.getElementById("results-screen").hidden = true;
 }
 
->>>>>>> 86331a863d18aa2ad6f15741fe6b484800f76dfe
 function initQuiz() {
     document.getElementById("total-questions").textContent = maxNumberOfQuestions;
     document.getElementById("current-question").textContent = 1;
@@ -78,8 +68,6 @@ function initQuiz() {
     loadQuestion();
 }
 
-
-// Shuffle an array so questions and answer options appear in a random order
 function shuffleArray(items) {
     const shuffled = [...items];
 
@@ -91,7 +79,6 @@ function shuffleArray(items) {
     return shuffled;
 }
 
-// Load the next question and display its answer options
 function loadQuestion() {
     const questionId = questionOrder[currentQuestionIndex];
     const questionData = selectedQuestionSet[questionId];
@@ -131,7 +118,6 @@ function loadQuestion() {
     document.getElementById("next-btn").disabled = true;
 }
 
-// Check the selected answer and show whether it is correct
 function handleAnswer(selectedIndex) {
     if (answered) {
         return;
@@ -162,7 +148,6 @@ function handleAnswer(selectedIndex) {
     document.getElementById("next-btn").disabled = false;
 }
 
-// Move to the next question when the user clicks Next
 function handleNext() {
     if (!answered) {
         return;
@@ -178,7 +163,6 @@ function handleNext() {
     loadQuestion();
 }
 
-// Show the final score and completion message
 function showResults() {
     document.getElementById("quiz-screen").style.display = "none";
     document.getElementById("results-screen").hidden = false;
@@ -186,7 +170,7 @@ function showResults() {
     document.getElementById("max-score").textContent = maxNumberOfQuestions;
 
     if (score === maxNumberOfQuestions) {
-        document.getElementById("result-message").textContent = "Perfect Score! Einstein Would Be Proud!";
+        document.getElementById("result-message").textContent = "Perfect Score!Einstein Would Be Proud!";
     } else if (score >= Math.round(maxNumberOfQuestions * 0.7)) {
         document.getElementById("result-message").textContent = "Good job, Rocket Scientist in Training!";
     } else if (score >= Math.round(maxNumberOfQuestions * 0.5)) {
@@ -196,7 +180,6 @@ function showResults() {
     }
 }
 
-// Reset the quiz so the user can start again
 function restartQuiz() {
     currentQuestionIndex = 0;
     score = 0;
