@@ -1,4 +1,4 @@
-const maxNumberOfQuestions = 10;
+const maxNumberOfQuestions = 3;
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -62,6 +62,7 @@ function initQuiz() {
     document.getElementById("restart-btn").addEventListener("click", restartQuiz);
     document.getElementById("restart-in-quiz-btn").addEventListener("click", restartQuiz);
     document.getElementById("choose-category-btn").addEventListener("click", showWelcomeScreen);
+    document.getElementById("results-choose-category-btn").addEventListener("click", showWelcomeScreen);
 
     questionOrder = shuffleArray(selectedQuestionSet.map((_, index) => index));
     loadQuestion();
