@@ -12,3 +12,10 @@ initial-push
 
 >JS
 ![](documentation/validation/js-validation.png)
+
+>Lighthouse - Desktop
+![](documentation/lighthouse/lighthouse-desktop.png)
+
+>Lighthouse - Mobile
+![](documentation\lighthouse\lighthouse-mobile.png)
+
