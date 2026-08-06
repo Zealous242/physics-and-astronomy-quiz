@@ -38,8 +38,6 @@ categoryButtons.forEach((button) => {
     });
 });
 
-let headerTitle = document.getElementById("header-category-title");
-//headerTitle.textContent = document.getElementById("category-title").textContent
 
 function showWelcomeScreen() {
     document.getElementById("welcome-screen").style.display = "block";
