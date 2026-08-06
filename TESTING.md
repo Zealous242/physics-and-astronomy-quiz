@@ -19,3 +19,12 @@ initial-push
 >Lighthouse - Mobile
 ![](documentation\lighthouse\lighthouse-mobile.png)
 
+>Google Chrome
+![](documentation/cross-platform/test-chrome.png)
+
+>Mozilla Firefox - Developer Edition
+![](documentation/cross-platform/test-firefox.png)
+
+>Opera GX
+![](documentation/cross-platform/test-operagx.png)
+
