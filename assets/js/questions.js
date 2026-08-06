@@ -1,3 +1,5 @@
+/* jshint eshint: 11 */
+
 // Physics Quiz Questions
 
 const physicsQuestions = [{
