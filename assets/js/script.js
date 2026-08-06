@@ -1,3 +1,5 @@
+/* jshint eshint: 11 */
+
 const maxNumberOfQuestions = 10;
 
 let currentQuestionIndex = 0;
