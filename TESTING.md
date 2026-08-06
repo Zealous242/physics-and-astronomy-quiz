@@ -45,6 +45,14 @@ No visual or functional issues were identified.
 >Opera GX
 ![](documentation/cross-platform/test-operagx.png)
 
+## Responsiveness
+
+The website was tested using [Am I Responsive?](https://fireship.dev/amiresponsive) to check how the layout adapts across different screen sizes, including desktop, tablet, and mobile views.
+
+The tool was used to ensure that the website maintains a consistent layout, readable content, and accessible navigation across different devices.
+![](documentation\user-stories\am-i-responsive-cream-bg.png)
+
+
 ## User Stories
 
 ### Welcome Screen
@@ -260,3 +268,47 @@ As a user, I want to know my performance level so that I understand my result.
 ![](documentation/user-stories/test-score-7-10.png)
 >Score: 10/10
 ![](documentation/user-stories/test-score-10-10.png)
+
+### Restart Button
+
+As a user, I want to restart the quiz after finishing so that I can try to improve my score. I should also be able to restart the quiz at anything throughout without using the refresh button
+
+**Acceptance Criteria:**
+
+- [x] A Restart Quiz button is displayed on the results screen.
+- [x] Clicking the button resets the quiz.
+- [x] A new quiz begins with shuffled questions.
+
+**Implementation Tasks:**
+
+- [x] Create a Restart Quiz button.
+- [x] Reset the score and question index.
+- [x] Shuffle the questions and answers again.
+- [x] Display the first question.
+
+![](documentation/user-stories/user-story-restart-button-test.png)
+
+### Responsive Design
+
+As a user, I want the quiz to work on desktop, tablet, and mobile devices so that I can access it from any device.
+
+**Acceptance Criteria:**
+
+- [x] The layout adapts correctly to different screen sizes.
+- [x] Buttons and controls remain easy to use on touch devices.
+- [x] Text remains readable without horizontal scrolling.
+- [x] Text remains readable without zooming.
+
+**Implementation Tasks:**
+
+- [x] Use semantic HTML5 elements to structure the page.
+- [x] Build a responsive layout using CSS, Flexbox or Grid.
+- [x] Add media queries for different screen sizes.
+- [x] Test the website on desktop, tablet, and mobile devices.
+
+>Desktop
+![](documentation/user-stories/user-story-welcome-test.png)
+>Tablet
+![](documentation/user-stories/user-story-tablet-test.png)
+>Mobile
+![](documentation/user-stories/user-story-mobile-test.png)
