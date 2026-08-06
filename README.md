@@ -68,7 +68,7 @@ Implementation Tasks:
 - Create a function to display the current question.
 - Dynamically update the webpage using DOM manipulation.
 
-### 5. Four-Question Layout (Must Have)
+### 5. Four-Response Layout (Must Have)
 
 **As a user, I want to select one answer from four options so that I can submit my response.**
 
@@ -532,8 +532,32 @@ The link to the diversity and inclusion website can be found at: https://zealous
 
 ## Credits
 
-- https://www.w3schools.com/ 
-- https://developer.mozilla.org/en-US/
-- ChatGPT
-- CoPilot
-- 
+- W3Schools - Used to help with wrtiing the HTML5, CSS3 and JavaScript
+Link: https://www.w3schools.com/ 
+
+- MDN - Used to help with wrtiing the HTML5, CSS3 and JavaScript
+Link: https://developer.mozilla.org/en-US/
+
+- Canva - Used to create wireframes and assist with planning the website layout and design before development.
+Link: https://www.canva.com/,
+
+- Bootstrap - Used for responsive layout structure, components, and styling support throughout the project.
+Link: https://getbootstrap.com/,
+
+- Code Institute - Used for accessing previous lessons, learning materials, and course resources to support development throughout the project.
+Link: https://codeinstitute.net/,
+
+- ChatGPT - Used as a support tool for guidance, troubleshooting, explanations, and assistance during development.
+Link: https://chat.openai.com/,
+
+- Font Awesome - Used to provide icons throughout the website to improve visual communication and user experience.
+Link: https://fontawesome.com/,
+
+- W3C Markup Validation Service - Used to validate HTML code and identify structural errors to ensure the website followed web standards.
+Link: https://validator.w3.org/,
+
+- W3C CSS Validation Service - Used to validate CSS code and identify styling errors or issues with CSS standards compliance.
+Link: https://jigsaw.w3.org/css-validator/,
+
+GitHub Copilot - Used as a coding assistant to provide suggestions, help troubleshoot issues, and improve development efficiency while building the project.
+Link: https://github.com/features/copilot
