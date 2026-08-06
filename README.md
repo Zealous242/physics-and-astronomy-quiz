@@ -3,6 +3,10 @@
 ## Introduction
 The purpose of this website is to serve as an interactive quiz on Physics and Astronomy. It is being developed as part of Code Institutes "Hackathon 1 - Front-end with HTML, CSS and JavaScript" project. 
 
+## Link To Site
+
+https://zealous242.github.io/physics-and-astronomy-quiz/
+
 ## User Stories
 ### 1. Welcome Screen (Must Have)
 
@@ -510,3 +514,26 @@ The CoPilot extension was used in VS Code to generate code blocks for sections s
 - CoPilot
 - ChatGPT
 - Markdown Builder
+
+## Deployment
+
+The site was deployed to GitHub pages. The steps taken to do this are as follows:
+
+1. Navigate to the repository
+2. Click on settings
+3. Go to pages
+4. In the "Build and deployment" section set the source to "Deploy from main branch"
+5. Click Save
+6. Wait 5 minutes for the link to go live
+7. After 5 minutes or more refresh the page and you should see the link
+8. Click Visit Site 
+
+The link to the diversity and inclusion website can be found at: https://zealous242.github.io/physics-and-astronomy-quiz/ 
+
+## Credits
+
+- https://www.w3schools.com/ 
+- https://developer.mozilla.org/en-US/
+- ChatGPT
+- CoPilot
+- 
