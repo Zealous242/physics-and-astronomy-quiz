@@ -13,6 +13,9 @@ initial-push
 >JS
 ![](documentation/validation/js-validation.png)
 
+>JS - Qestions
+![](documentation/validation/js-questions-validation.png)
+
 >Lighthouse - Desktop
 ![](documentation/lighthouse/lighthouse-desktop.png)
 
