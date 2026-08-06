@@ -1,4 +1,4 @@
-/* jshint eshint: 11 */
+/* jshint esversion: 11 */
 
 // Physics Quiz Questions
 
