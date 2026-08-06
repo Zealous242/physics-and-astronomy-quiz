@@ -312,3 +312,7 @@ As a user, I want the quiz to work on desktop, tablet, and mobile devices so tha
 ![](documentation/user-stories/user-story-tablet-test.png)
 >Mobile
 ![](documentation/user-stories/user-story-mobile-test.png)
+
+## Footer 
+
+During testing, the footer layout was refined to improve the overall visual balance of the page. The text was spaced more evenly and aligned with the main content and button layout, creating a cleaner and more consistent appearance across the website. The footer was also tested on different screen sizes to ensure the spacing and alignment remained responsive. Additionally, spacing was added between the action buttons on the results screen to improve readability and prevent accidental button presses. A hover effect was also implemented to provide clear visual feedback when users interact with the buttons.
