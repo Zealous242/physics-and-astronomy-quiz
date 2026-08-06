@@ -43,6 +43,8 @@ function showWelcomeScreen() {
     document.getElementById("welcome-screen").style.display = "block";
     document.getElementById("quiz-screen").style.display = "none";
     document.getElementById("results-screen").hidden = true;
+    currentQuestionIndex = 0;
+    score = 0
 }
 
 function initQuiz() {
@@ -119,6 +121,8 @@ function loadQuestion() {
 }
 
 function handleAnswer(selectedIndex) {
+    document.getElementById("feedback").classList.remove("hide");
+
     if (answered) {
         return;
     }
@@ -149,6 +153,7 @@ function handleAnswer(selectedIndex) {
 }
 
 function handleNext() {
+    document.getElementById("feedback").classList.add("hide");
     if (!answered) {
         return;
     }
